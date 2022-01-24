@@ -9,6 +9,7 @@
     "build:sitemap": "next-sitemap --config next-sitemap.config.js",
     "build:ogImages": "next-static-og-images --width 600 --height 315 --deviceScaleFactor 2",
     "postbuild": "npm run build:sitemap && npm run build:ogImages",
+    "export": "next export",
     "start": "next start",
     "lint": "next lint",
     "lint-staged": "lint-staged",
