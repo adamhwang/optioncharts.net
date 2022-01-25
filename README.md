@@ -1,4 +1,4 @@
-# ![O](public/favicon-16x16.png?raw=true "O")ptionCharts.net
+# ![O](public/favicon-32x32.png?raw=true "O")ptionCharts.net
 
 Option payoff charts
 
