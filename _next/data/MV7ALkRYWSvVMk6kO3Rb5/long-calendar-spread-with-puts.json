@@ -1,0 +1,1 @@
+{"pageProps":{"title":"Long Calendar Spread with Puts","aliases":[],"optionLegs":[{"k":105,"dte":30,"v":0.15,"callPut":"put","longShort":"short"},{"k":105,"dte":90,"v":0.15,"callPut":"put","longShort":"long"}]},"__N_SSG":true}

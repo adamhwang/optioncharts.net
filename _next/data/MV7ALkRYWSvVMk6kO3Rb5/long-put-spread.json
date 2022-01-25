@@ -1,0 +1,1 @@
+{"pageProps":{"title":"Long Put Spread","aliases":["Bear Put Spread"],"optionLegs":[{"k":95,"dte":90,"v":0.15,"callPut":"put","longShort":"short"},{"k":105,"dte":90,"v":0.15,"callPut":"put","longShort":"long"}]},"__N_SSG":true}

@@ -1,0 +1,1 @@
+{"pageProps":{"title":"Risk Reversal","aliases":[],"optionLegs":[{"k":105,"dte":90,"v":0.15,"callPut":"call","longShort":"long"},{"k":95,"dte":90,"v":0.15,"callPut":"put","longShort":"short"}]},"__N_SSG":true}

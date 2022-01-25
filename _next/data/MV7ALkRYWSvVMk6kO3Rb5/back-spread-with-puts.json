@@ -1,0 +1,1 @@
+{"pageProps":{"title":"Back Spread with Puts","aliases":[],"optionLegs":[{"k":100,"dte":90,"v":0.15,"callPut":"put","longShort":"short"},{"k":95,"dte":90,"v":0.15,"callPut":"put","longShort":"long"},{"k":95,"dte":90,"v":0.15,"callPut":"put","longShort":"long"}]},"__N_SSG":true}

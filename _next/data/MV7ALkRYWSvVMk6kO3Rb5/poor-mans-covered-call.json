@@ -1,0 +1,1 @@
+{"pageProps":{"title":"Poor Man's Covered Call","aliases":["Fig Leaf","Leveraged Covered Call"],"optionLegs":[{"k":80,"dte":360,"v":0.15,"callPut":"call","longShort":"long"},{"k":105,"dte":90,"v":0.15,"callPut":"call","longShort":"short"}]},"__N_SSG":true}

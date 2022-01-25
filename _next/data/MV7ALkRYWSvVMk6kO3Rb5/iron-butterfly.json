@@ -1,0 +1,1 @@
+{"pageProps":{"title":"Iron Butterfly","aliases":[],"optionLegs":[{"k":95,"dte":90,"v":0.15,"callPut":"put","longShort":"long"},{"k":100,"dte":90,"v":0.15,"callPut":"put","longShort":"short"},{"k":100,"dte":90,"v":0.15,"callPut":"call","longShort":"short"},{"k":105,"dte":90,"v":0.15,"callPut":"call","longShort":"long"}]},"__N_SSG":true}

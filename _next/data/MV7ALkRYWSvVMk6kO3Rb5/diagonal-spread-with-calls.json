@@ -1,0 +1,1 @@
+{"pageProps":{"title":"Diagonal Spread with Calls","aliases":[],"optionLegs":[{"k":95,"dte":90,"v":0.15,"callPut":"call","longShort":"long"},{"k":105,"dte":30,"v":0.15,"callPut":"call","longShort":"short"},{"k":105,"dte":30,"v":0.15,"callPut":"call","longShort":"short"}]},"__N_SSG":true}
