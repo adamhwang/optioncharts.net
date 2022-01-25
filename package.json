@@ -13,7 +13,9 @@
     "start": "next start",
     "lint": "next lint",
     "lint-staged": "lint-staged",
-    "prepare": "husky install .husky"
+    "prepare": "husky install .husky",
+    "predeploy": "npm run build:export && echo www.optioncharts.net > ./out/CNAME && touch ./out/.nojekyll",
+    "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
     "bootstrap": "^5.1.3",
@@ -34,6 +36,7 @@
     "autoprefixer": "^10.4.2",
     "eslint": "8.7.0",
     "eslint-config-next": "12.0.8",
+    "gh-pages": "^3.2.3",
     "husky": "^7.0.4",
     "lint-staged": "^12.2.2",
     "next-sitemap": "^1.9.12",
