@@ -1,0 +1,932 @@
+[
+  {
+    "title": "Back Spread with Calls",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Back Spread with Puts",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      },
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Short Box Spread",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Long Box Spread",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Broken Wing Butterfly with Calls",
+    "aliases": [ "Skip Strike Butterfly", "Split Strike Butterfly" ],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 110,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Broken Wing Butterfly with Puts",
+    "aliases": [ "Skip Strike Butterfly", "Split Strike Butterfly" ],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 110,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Butterfly Spread with Calls",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Butterfly Spread with Puts",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Long Calendar Spread with Calls",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 105,
+        "dte": 30,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Long Calendar Spread with Puts",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 105,
+        "dte": 30,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Long Call",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Short Call",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Long Call Spread",
+    "aliases": [ "Bull Call Spread" ],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Short Call Spread",
+    "aliases": [ "Bear Call Spread" ],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Christmas Tree Spread with Calls",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 110,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 110,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Christmas Tree Spread with Puts",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      },
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 90,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      },
+      {
+        "k": 90,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Diagonal Spread with Calls",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 105,
+        "dte": 30,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 30,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Diagonal Spread with Puts",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      },
+      {
+        "k": 95,
+        "dte": 30,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 95,
+        "dte": 30,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Front Spread with Calls",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Front Spread with Puts",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      },
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Iron Butterfly",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Iron Condor",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 90,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      },
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 110,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Long Jelly Roll",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 60,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 100,
+        "dte": 60,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Short Jelly Roll",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 60,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 100,
+        "dte": 60,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Long Put",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Short Put",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Short Put Spread",
+    "aliases": [ "Bull Put Spread" ],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Long Put Spread",
+    "aliases": [ "Bear Put Spread" ],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Poor Man's Covered Call",
+    "aliases": [ "Fig Leaf", "Leveraged Covered Call" ],
+    "optionLegs": [
+      {
+        "k": 80,
+        "dte": 360,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Risk Reversal",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Long Straddle",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Short Straddle",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Long Strangle",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      }
+    ]
+  },
+  {
+    "title": "Short Strangle",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 95,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 105,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Synthetic Long",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "long"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "short"
+      }
+    ]
+  },
+  {
+    "title": "Synthetic Short",
+    "aliases": [],
+    "optionLegs": [
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "call",
+        "longShort": "short"
+      },
+      {
+        "k": 100,
+        "dte": 90,
+        "v": 0.15,
+        "callPut": "put",
+        "longShort": "long"
+      }
+    ]
+  }
+]

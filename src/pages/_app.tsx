@@ -1,16 +1,20 @@
 import "../styles/globals.scss";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import type { AppProps } from "next/app";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import { NextSeo } from "next-seo";
 
+import Nav from "../components/Nav";
+
 import * as ga from "../lib/google-analytics";
 
 function App({ Component, pageProps }: AppProps) {
   const { asPath, events } = useRouter();
 
+  const [showMenu, setShowMenu] = useState(false);
   useEffect(() => {
     const handleRouteChange = (url: string) => {
       ga.pageview(url);
@@ -96,10 +100,7 @@ function App({ Component, pageProps }: AppProps) {
         ]}
       />
 
-      <div
-        className="d-flex h-100 p-3 mx-auto flex-column"
-        style={{ maxWidth: "800px" }}
-      >
+      <div className="container d-flex h-100 p-3 mx-auto flex-column">
         <nav className="navbar navbar-light">
           <Link href="/">
             <a className="navbar-brand">
@@ -110,18 +111,40 @@ function App({ Component, pageProps }: AppProps) {
                 height="30"
                 alt="OptionCharts.net logo"
               />
-              <h1
-                className="fs-4 d-inline-block navbar-title"
-                style={{ marginLeft: "-.5em" }}
-              >
+              <h1 className="fs-4 d-inline-block navbar-title m-0 ms-n2">
                 OptionCharts.net
               </h1>
             </a>
           </Link>
+          <button
+            className="btn float-end d-inline-block d-lg-none"
+            role="button"
+            aria-label="Close"
+            onClick={() => setShowMenu(!showMenu)}
+          >
+            <FaBars />
+          </button>
         </nav>
 
-        <main role="main">
-          <Component {...pageProps} />
+        <main role="main" className="d-flex flex-row">
+          <div
+            className={`${
+              showMenu
+                ? "offcanvas offcanvas-start show visible"
+                : "d-none d-lg-block me-5"
+            }`}
+            style={{ maxWidth: "80vw" }}
+          >
+            <div
+              className="offcanvas-body"
+              style={{ maxHeight: showMenu ? "inherit" : "80vh" }}
+            >
+              <Nav />
+            </div>
+          </div>
+          <div className="flex-grow-1">
+            <Component {...pageProps} />
+          </div>
         </main>
       </div>
 

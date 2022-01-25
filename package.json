@@ -1,5 +1,5 @@
 {
-  "name": "optioncharts",
+  "name": "optioncharts.net",
   "private": true,
   "scripts": {
     "postinstall": "next telemetry disable",
@@ -7,7 +7,7 @@
     "build": "next build",
     "build:export": "npm run build && npm run export",
     "build:sitemap": "next-sitemap --config next-sitemap.config.js",
-    "build:ogImages": "next-static-og-images --width 600 --height 315 --deviceScaleFactor 2",
+    "build:ogImages": "next-static-og-images --width 667 --height 350 --deviceScaleFactor 1.8",
     "postbuild": "npm run build:sitemap && npm run build:ogImages",
     "export": "next export",
     "start": "next start",
@@ -23,7 +23,7 @@
     "react-dom": "17.0.2",
     "react-financial-charts": "^1.3.2",
     "react-icons": "^4.3.1",
-    "react-option-charts": "^0.0.8",
+    "react-option-charts": "^0.0.9",
     "sass": "^1.49.0",
     "use-immer": "^0.6.0"
   },
@@ -37,7 +37,7 @@
     "husky": "^7.0.4",
     "lint-staged": "^12.2.2",
     "next-sitemap": "^1.9.12",
-    "next-static-og-images": "^0.0.4",
+    "next-static-og-images": "^0.0.5",
     "next-transpile-modules": "^9.0.0",
     "postcss": "^8.4.5",
     "prettier": "^2.5.1",

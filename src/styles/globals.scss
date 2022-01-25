@@ -23,5 +23,6 @@ $font-family-sans-serif: 'Space Mono', monospace;
 $font-family-monospace: $font-family-sans-serif;
 $input-btn-focus-box-shadow: none;
 $input-btn-focus-width: 0;
-
+$enable-negative-margins: true;
+    
 @import "~bootstrap/scss/bootstrap";
