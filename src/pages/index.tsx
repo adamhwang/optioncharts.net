@@ -1,18 +1,14 @@
-import type { GetStaticProps, NextPage } from "next";
+import type { GetStaticProps } from "next";
 
-import Chart, { ChartProps } from "../components/Chart";
+import StratPage, { OptionStrat } from "./[strat]";
 
 import options from "../options.json";
 
-const Home: NextPage<ChartProps> = (props) => {
-  return <Chart {...props}></Chart>;
-};
+export default StratPage;
 
-export default Home;
-
-export const getStaticProps: GetStaticProps<ChartProps> = async (context) => {
+export const getStaticProps: GetStaticProps<OptionStrat> = async (context) => {
   const strategy = "Iron Condor";
-  const props = (options as ChartProps[]).find((o) => o.title === strategy);
+  const props = (options as OptionStrat[]).find((o) => o.title === strategy);
   if (!props) throw `${strategy} not found`;
   return {
     props,

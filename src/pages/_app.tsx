@@ -1,6 +1,6 @@
 import "../styles/globals.scss";
 import { useEffect, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import type { AppProps } from "next/app";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -8,7 +8,7 @@ import Script from "next/script";
 import { NextSeo } from "next-seo";
 
 import Nav from "../components/Nav";
-
+import { OptionLegsProvider } from "../contexts/OptionLegs";
 import * as ga from "../lib/google-analytics";
 
 function App({ Component, pageProps }: AppProps) {
@@ -143,7 +143,9 @@ function App({ Component, pageProps }: AppProps) {
             </div>
           </div>
           <div className="flex-grow-1">
-            <Component {...pageProps} />
+            <OptionLegsProvider>
+              <Component {...pageProps} />
+            </OptionLegsProvider>
           </div>
         </main>
       </div>

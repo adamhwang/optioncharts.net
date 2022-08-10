@@ -1,25 +1,18 @@
-import { useState, FunctionComponent, useEffect } from "react";
+import { FunctionComponent, useContext } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import OptionPayoffChart from "react-option-charts";
-import { useImmer } from "use-immer";
+import { OptionLegs } from "../contexts/OptionLegs";
 import { IOptionLeg, toChartOptionLeg } from "../optionLeg";
 
-export type ChartProps = {
+type ChartProps = {
   title: string;
-  aliases?: string[];
-  optionLegs: IOptionLeg[];
 };
 
 const Chart: FunctionComponent<ChartProps> = (props) => {
-  const { title, aliases, optionLegs: initialOptionLegs } = props;
+  const { title } = props;
 
-  const [underlying, setUnderlying] = useState(100);
-  const [rfr, setRfr] = useState(0.01);
-  const [optionLegs, setOptionLegs] = useImmer<IOptionLeg[]>(initialOptionLegs);
-
-  useEffect(() => {
-    setOptionLegs(initialOptionLegs);
-  }, [title, initialOptionLegs]);
+  const { underlying, setUnderlying, rfr, setRfr, optionLegs, setOptionLegs } =
+    useContext(OptionLegs);
 
   const renderStrategy = (legs: IOptionLeg[]) =>
     legs.map((o, i) => (
