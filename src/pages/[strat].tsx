@@ -4,6 +4,7 @@ import { NextSeo } from "next-seo";
 import { ParsedUrlQuery } from "querystring";
 
 import Chart from "../components/Chart";
+import Editor from "../components/Editor";
 import { OptionLegs } from "../contexts/OptionLegs";
 import { IOptionLeg } from "../optionLeg";
 import { toSlug } from "../utils";
@@ -33,6 +34,7 @@ const StratPage: NextPage<OptionStrat> = (props) => {
     <>
       <NextSeo title={title} openGraph={{ title }} />
       <Chart {...props}></Chart>
+      <Editor></Editor>
     </>
   );
 };
