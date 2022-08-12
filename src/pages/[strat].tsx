@@ -53,9 +53,10 @@ const StratPage: NextPage<OptionStrat> = (props) => {
       <div className="pt-3 col-sm-6" key={`table-${i}`}>
         <div
           style={{
-            color: key.endsWith("payoff")
-              ? colors.payoffLineChart
-              : colors.lineChart,
+            color:
+              key.indexOf("payoff") === -1
+                ? colors.lineChart
+                : colors.payoffLineChart,
           }}
         >
           {key}
