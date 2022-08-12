@@ -1,13 +1,15 @@
-import { useContext, useEffect } from "react";
+import { useMemo, useState } from "react";
 import type { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { NextSeo } from "next-seo";
+import { OptionPayoffChartProps } from "react-option-charts";
 import { ParsedUrlQuery } from "querystring";
 
 import Chart from "../components/Chart";
 import Editor from "../components/Editor";
-import { OptionLegs } from "../contexts/OptionLegs";
+import Table, { TableProps } from "../components/Table";
+import { OptionLegsProvider } from "../contexts/OptionLegs";
 import { IOptionLeg } from "../optionLeg";
-import { toSlug } from "../utils";
+import { colors, toSlug } from "../utils";
 
 import options from "../options.json";
 
@@ -24,18 +26,55 @@ type StratParsedUrlQuery = ParsedUrlQuery & {
 const StratPage: NextPage<OptionStrat> = (props) => {
   const { title, optionLegs } = props;
 
-  const { setOptionLegs } = useContext(OptionLegs);
+  const [tableValues, setTableValues] = useState<{
+    [key: string]: Partial<TableProps>;
+  }>({});
 
-  useEffect(() => {
-    setOptionLegs(optionLegs);
-  }, [optionLegs, setOptionLegs]);
+  const onCurrentValueChanged = useMemo<
+    OptionPayoffChartProps["onCurrentValueChanged"]
+  >(
+    () => (x, start, current) => {
+      setTableValues(
+        Object.keys(start).reduce((acc, key) => {
+          acc[key] = {
+            x,
+            start: start[key],
+            current: current[key],
+          };
+          return acc;
+        }, {} as typeof tableValues)
+      );
+    },
+    []
+  );
+
+  const tables = Object.keys(tableValues).map((key, i) => {
+    return (
+      <div className="pt-3 col-sm-6" key={`table-${i}`}>
+        <div
+          style={{
+            color: key.endsWith("payoff")
+              ? colors.payoffLineChart
+              : colors.lineChart,
+          }}
+        >
+          {key}
+        </div>
+        <Table {...tableValues[key]}></Table>
+      </div>
+    );
+  });
 
   return (
-    <>
+    <OptionLegsProvider optionLegs={optionLegs}>
       <NextSeo title={title} openGraph={{ title }} />
-      <Chart {...props}></Chart>
+      <Chart
+        title={title}
+        onCurrentValueChanged={onCurrentValueChanged}
+      ></Chart>
       <Editor></Editor>
-    </>
+      <div className="row">{tables}</div>
+    </OptionLegsProvider>
   );
 };
 

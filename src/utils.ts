@@ -4,3 +4,8 @@ export const toSlug = (title: string) =>
     .trim()
     .replace(/ +/g, "-")
     .toLowerCase();
+
+export const colors = {
+  lineChart: "#FF5959",
+  payoffLineChart: "#676FA3",
+};

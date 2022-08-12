@@ -1,22 +1,25 @@
+import React from "react";
 import { FunctionComponent, useContext } from "react";
-import OptionPayoffChart, { OptionStrategyValue } from "react-option-charts";
+import OptionPayoffChart, { OptionPayoffChartProps } from "react-option-charts";
 import { OptionLegs } from "../contexts/OptionLegs";
-import { IOptionLeg, toChartOptionLeg } from "../optionLeg";
+import { toChartOptionLeg } from "../optionLeg";
+import { colors } from "../utils";
 
 type ChartProps = {
   title: string;
+  onCurrentValueChanged: OptionPayoffChartProps["onCurrentValueChanged"];
 };
 
-const Chart: FunctionComponent<ChartProps> = (props) => {
-  const { title } = props;
+const Chart: FunctionComponent<ChartProps> = React.memo((props) => {
+  const { title, onCurrentValueChanged } = props;
 
   const { underlying, rfr, optionLegs } = useContext(OptionLegs);
 
   const strategies = [
     {
       name: title,
-      color: "#FF5959",
-      payoffColor: "#676FA3",
+      color: colors.lineChart,
+      payoffColor: colors.payoffLineChart,
       optionLegs: optionLegs.map((o) => toChartOptionLeg(o)),
     },
   ];
@@ -36,9 +39,10 @@ const Chart: FunctionComponent<ChartProps> = (props) => {
         s={underlying}
         r={rfr}
         strategies={strategies}
+        onCurrentValueChanged={onCurrentValueChanged}
       ></OptionPayoffChart>
     </div>
   );
-};
+});
 
 export default Chart;

@@ -143,9 +143,7 @@ function App({ Component, pageProps }: AppProps) {
             </div>
           </div>
           <div className="flex-grow-1">
-            <OptionLegsProvider>
-              <Component {...pageProps} />
-            </OptionLegsProvider>
+            <Component {...pageProps} />
           </div>
         </main>
       </div>
