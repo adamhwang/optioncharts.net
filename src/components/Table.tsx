@@ -4,17 +4,14 @@ import { formatUSD, OptionStrategyValue } from "react-option-charts";
 import { OptionLegs } from "../contexts/OptionLegs";
 
 export type TableProps = {
+  name: string;
   x: number;
   start: OptionStrategyValue;
   current: OptionStrategyValue;
 };
 
-const Table: FunctionComponent<Partial<TableProps>> = ({
-  x,
-  start,
-  current,
-}) => {
-  const { underlying } = useContext(OptionLegs);
+const Table: FunctionComponent<TableProps> = ({ name, x, start, current }) => {
+  const { strategy, underlying } = useContext(OptionLegs);
 
   if (!x || !start || !current) return <></>;
 
@@ -32,27 +29,39 @@ const Table: FunctionComponent<Partial<TableProps>> = ({
   });
 
   return (
-    <table className="table small">
-      <thead>
-        <tr>
-          <td scope="col">#</td>
-          <td scope="col">@{formatUSD(underlying)}</td>
-          <td scope="col">@{formatUSD(x)}</td>
-          <td scope="col">Δ</td>
-        </tr>
-      </thead>
-      <tbody>
-        {rows}
-        <tr>
-          <td style={bottomRowTopBorder}></td>
-          <td style={bottomRowTopBorder}>{formatUSD(start.total)}</td>
-          <td style={bottomRowTopBorder}>{formatUSD(current.total)}</td>
-          <td style={bottomRowTopBorder}>
-            {formatUSD(current.total - start.total)}
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <>
+      <div
+        style={{
+          color:
+            name !== strategy.payoffTitle
+              ? strategy.color
+              : strategy.payoffColor,
+        }}
+      >
+        {name}
+      </div>
+      <table className="table small">
+        <thead>
+          <tr>
+            <td scope="col">#</td>
+            <td scope="col">@{formatUSD(underlying)}</td>
+            <td scope="col">@{formatUSD(x)}</td>
+            <td scope="col">Δ</td>
+          </tr>
+        </thead>
+        <tbody>
+          {rows}
+          <tr>
+            <td style={bottomRowTopBorder}></td>
+            <td style={bottomRowTopBorder}>{formatUSD(start.total)}</td>
+            <td style={bottomRowTopBorder}>{formatUSD(current.total)}</td>
+            <td style={bottomRowTopBorder}>
+              {formatUSD(current.total - start.total)}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </>
   );
 };
 

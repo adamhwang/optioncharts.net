@@ -9,7 +9,7 @@ import Editor from "../components/Editor";
 import Table, { TableProps } from "../components/Table";
 import { OptionLegsProvider } from "../contexts/OptionLegs";
 import { IOptionLeg } from "../optionLeg";
-import { colors, toSlug } from "../utils";
+import { toSlug } from "../utils";
 
 import options from "../options.json";
 
@@ -27,7 +27,7 @@ const StratPage: NextPage<OptionStrat> = (props) => {
   const { title, optionLegs } = props;
 
   const [tableValues, setTableValues] = useState<{
-    [key: string]: Partial<TableProps>;
+    [key: string]: TableProps;
   }>({});
 
   const onCurrentValueChanged = useMemo<
@@ -40,6 +40,7 @@ const StratPage: NextPage<OptionStrat> = (props) => {
             x,
             start: start[key],
             current: current[key],
+            name: key,
           };
           return acc;
         }, {} as typeof tableValues)
@@ -48,26 +49,14 @@ const StratPage: NextPage<OptionStrat> = (props) => {
     []
   );
 
-  const tables = Object.keys(tableValues).map((key, i) => {
-    return (
-      <div className="pt-3 col-sm-6" key={`table-${i}`}>
-        <div
-          style={{
-            color:
-              key.indexOf("payoff") === -1
-                ? colors.lineChart
-                : colors.payoffLineChart,
-          }}
-        >
-          {key}
-        </div>
-        <Table {...tableValues[key]}></Table>
-      </div>
-    );
-  });
+  const tables = Object.keys(tableValues).map((key, i) => (
+    <div key={`table-${i}`} className="pt-3 col-sm-6">
+      <Table {...tableValues[key]}></Table>
+    </div>
+  ));
 
   return (
-    <OptionLegsProvider optionLegs={optionLegs}>
+    <OptionLegsProvider title={title} optionLegs={optionLegs}>
       <NextSeo title={title} openGraph={{ title }} />
       <Chart
         title={title}

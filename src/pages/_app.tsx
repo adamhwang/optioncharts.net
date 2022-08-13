@@ -8,7 +8,6 @@ import Script from "next/script";
 import { NextSeo } from "next-seo";
 
 import Nav from "../components/Nav";
-import { OptionLegsProvider } from "../contexts/OptionLegs";
 import * as ga from "../lib/google-analytics";
 
 function App({ Component, pageProps }: AppProps) {
