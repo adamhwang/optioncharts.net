@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import { NextSeo } from "next-seo";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 import Nav from "../components/Nav";
 import * as ga from "../lib/google-analytics";
@@ -160,6 +161,7 @@ function App({ Component, pageProps }: AppProps) {
                   gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
                 `}
       </Script>
+      <GoogleAnalytics trackPageViews />
     </>
   );
 }
