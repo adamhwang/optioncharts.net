@@ -11,16 +11,40 @@ export type TableProps = {
 };
 
 const Table: FunctionComponent<TableProps> = ({ name, x, start, current }) => {
-  const { strategy, underlying } = useContext(OptionLegs);
+  const { strategy, underlying, optionLegs } = useContext(OptionLegs);
 
   if (!x || !start || !current) return <></>;
 
   const rows = start.optionLegValues.map((o, i) => {
+    const isITM = (price: number) =>
+      (optionLegs[i] &&
+        optionLegs[i].callPut === "call" &&
+        price > optionLegs[i].k) ||
+      (optionLegs[i] &&
+        optionLegs[i].callPut === "put" &&
+        price < optionLegs[i].k) ? (
+        <small
+          className={
+            "badge " +
+            (optionLegs[i].longShort == "long"
+              ? "text-bg-warning"
+              : "text-bg-danger")
+          }
+        >
+          ITM
+        </small>
+      ) : null;
     return (
       <tr key={`row-${i}`}>
         <td scope="row">{i + 1}</td>
-        <td>{formatUSD(start.optionLegValues[i])}</td>
-        <td>{formatUSD(current.optionLegValues[i])}</td>
+        <td>
+          <span className="me-2">{formatUSD(start.optionLegValues[i])}</span>
+          {isITM(underlying)}
+        </td>
+        <td>
+          <span className="me-2">{formatUSD(current.optionLegValues[i])}</span>
+          {isITM(x)}
+        </td>
         <td>
           {formatUSD(current.optionLegValues[i] - start.optionLegValues[i])}
         </td>
