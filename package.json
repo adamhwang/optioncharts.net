@@ -26,7 +26,7 @@
     "react-dom": "^17.0.2",
     "react-financial-charts": "^1.3.2",
     "react-icons": "^4.8.0",
-    "react-option-charts": "^0.1.2",
+    "react-option-charts": "^0.2.1",
     "sass": "^1.59.3",
     "use-immer": "^0.8.1"
   },

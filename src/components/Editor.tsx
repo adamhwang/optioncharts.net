@@ -40,31 +40,35 @@ const Editor: FunctionComponent = () => {
           />
         </div>
         <div className="col-2 px-1 px-sm-2">
-          <input
-            className="form-control form-control-sm"
-            aria-label={`leg ${i + 1} DTE`}
-            type="number"
-            value={o.dte}
-            onChange={(e) =>
-              setOptionLegs((draft) => {
-                draft[i].dte = +e.target.value;
-              })
-            }
-          />
+          {o.callPut !== "underlying" ? (
+            <input
+              className="form-control form-control-sm"
+              aria-label={`leg ${i + 1} DTE`}
+              type="number"
+              value={o.dte}
+              onChange={(e) =>
+                setOptionLegs((draft) => {
+                  draft[i].dte = +e.target.value;
+                })
+              }
+            />
+          ) : null}
         </div>
         <div className="col-2 px-1 px-sm-2">
-          <input
-            className="form-control form-control-sm"
-            aria-label={`leg ${i + 1} volatility`}
-            type="number"
-            value={o.v}
-            onChange={(e) =>
-              setOptionLegs((draft) => {
-                draft[i].v = +e.target.value;
-              })
-            }
-            step=".05"
-          />
+          {o.callPut !== "underlying" ? (
+            <input
+              className="form-control form-control-sm"
+              aria-label={`leg ${i + 1} volatility`}
+              type="number"
+              value={o.v}
+              onChange={(e) =>
+                setOptionLegs((draft) => {
+                  draft[i].v = +e.target.value;
+                })
+              }
+              step=".05"
+            />
+          ) : null}
         </div>
         <div className="col-2 px-1 px-sm-2">
           <select
@@ -73,12 +77,16 @@ const Editor: FunctionComponent = () => {
             value={o.callPut}
             onChange={(e) =>
               setOptionLegs((draft) => {
-                draft[i].callPut = e.target.value as "call" | "put";
+                draft[i].callPut = e.target.value as
+                  | "call"
+                  | "put"
+                  | "underlying";
               })
             }
           >
             <option>call</option>
             <option>put</option>
+            <option>underlying</option>
           </select>
         </div>
         <div className="col-2 px-1 px-sm-2 text-center text-sm-start">
